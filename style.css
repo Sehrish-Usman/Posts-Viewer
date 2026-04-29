@@ -1,0 +1,100 @@
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif}
+
+body{
+  background:url('https://images.unsplash.com/photo-1504711434969-e33886168f5c') no-repeat center/cover;
+  min-height:100vh;
+}
+
+.overlay{
+  background:rgba(90, 19, 161, 0.75);
+  min-height:100vh;
+  padding:20px;
+  color:#fff;
+}
+
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:20px;
+}
+
+.controls{
+  display:flex;
+  gap:10px;
+}
+
+input{
+  padding:8px;
+  border-radius:5px;
+  border:none;
+}
+
+button{
+  padding:8px 15px;
+  border:none;
+  border-radius:5px;
+  background:linear-gradient(45deg,#ff9800,#ff5722);
+  color:#1d0101;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button:hover{
+  transform:scale(1.1);
+  box-shadow:0 0 10px orange;
+}
+
+main{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.posts, .comments{
+  flex:1;
+  min-width:300px;
+}
+
+.post{
+  background:#02ebfc;
+  color:#000;
+  padding:15px;
+  margin-bottom:15px;
+  border-radius:10px;
+  cursor:pointer;
+  transition:0.4s;
+  animation:fadeIn 0.5s ease;
+}
+
+.post:hover{
+  transform:translateY(-5px) scale(1.02);
+  box-shadow:0 10px 20px rgba(187, 3, 3, 0.5);
+}
+
+.comment{
+  background:#95bd04;
+  padding:10px;
+  margin-bottom:10px;
+  border-radius:8px;
+  animation:fadeIn 0.4s ease;
+}
+
+.error{
+  background:red;
+  padding:10px;
+  margin-bottom:10px;
+  border-radius:5px;
+}
+
+.hidden{display:none}
+
+@keyframes fadeIn{
+  from{opacity:0;transform:translateY(10px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+@media(max-width:768px){
+  main{flex-direction:column}
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium News App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="overlay">
+  <header class="header">
+    <h1>📰 Premium Daily</h1>
+    <div class="controls">
+      <input type="text" id="search" placeholder="Search news...">
+      <button id="retryBtn">Retry</button>
+    </div>
+  </header>
+
+  <div id="error" class="error hidden"></div>
+
+  <main>
+    <section id="posts" class="posts"></section>
+    <section id="comments" class="comments"></section>
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
